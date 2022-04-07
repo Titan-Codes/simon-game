@@ -8,6 +8,15 @@ var level = 0;
 
 // Checks if the game has started and also checks if you press any key to restart the game.
 
+$(document).click(function () {
+    if (!started) {
+        $("#level-title").text("Level " + level);
+        nextSequence();
+        started = true;
+    }
+});
+
+
 $(document).keypress(function () {
     if (!started) {
         $("#level-title").text("Level " + level);
